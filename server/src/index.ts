@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 
@@ -15,5 +16,5 @@ app.get('/', (req, res) => {
 
 // Start server
 app.listen(port, () => {
-  // console.warn(`Server is running on port ${port}`);
+  // console.log(`Server is running on port ${port} in ${process.env.NODE_ENV} mode`);
 });
