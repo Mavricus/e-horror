@@ -8,4 +8,4 @@
     "strict": true
   },
   "include": ["eslint.config.mjs"]
-} 
+}
