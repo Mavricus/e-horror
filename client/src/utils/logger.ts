@@ -1,13 +1,25 @@
-import winston from 'winston';
+type LogLevel = 'info' | 'warn' | 'error';
 
-const logger = winston.createLogger({
-  level: 'info',
-  format: winston.format.combine(winston.format.timestamp(), winston.format.json()),
-  transports: [
-    new winston.transports.Console({
-      format: winston.format.combine(winston.format.colorize(), winston.format.simple()),
-    }),
-  ],
-});
+interface Logger {
+  info(message: string, ...args: unknown[]): void;
+  warn(message: string, ...args: unknown[]): void;
+  error(message: string, ...args: unknown[]): void;
+  log(level: LogLevel, message: string, ...args: unknown[]): void;
+}
+
+const logger: Logger = {
+  info(message: string, ...args: unknown[]): void {
+    logger.log('info', message, ...args);
+  },
+  warn(message: string, ...args: unknown[]): void {
+    logger.log('warn', message, ...args);
+  },
+  error(message: string, ...args: unknown[]): void {
+    logger.log('error', message, ...args);
+  },
+  log(level: LogLevel, message: string, ...args: unknown[]): void {
+    console.error(`[${level.toUpperCase()}] ${message}`, ...args);
+  },
+};
 
 export default logger;
