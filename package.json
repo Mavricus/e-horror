@@ -11,6 +11,7 @@
     "build": "pnpm -r run build",
     "lint": "pnpm -r run lint",
     "lint:fix": "pnpm -r run lint:fix",
+    "test": "pnpm -r run test",
     "format": "pnpm -r run format",
     "format:check": "pnpm -r run format:check"
   },
@@ -24,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/Mavricus/e-horror/issues"
   },
-  "homepage": "https://github.com/Mavricus/e-horror#readme"
+  "homepage": "https://github.com/Mavricus/e-horror#readme",
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
 }

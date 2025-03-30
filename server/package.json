@@ -9,12 +9,15 @@
   },
   "packageManager": "pnpm@10.7.0",
   "scripts": {
-    "start": "node --experimental-specifier-resolution=node dist/index.js",
-    "dev": "cross-env NODE_OPTIONS=\"--loader ts-node/esm\" node src/index.ts",
+    "start": "node dist/src/index.js",
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint \"src/**/*.ts\"",
-    "lint:fix": "eslint \"src/**/*.ts\" --fix"
+    "test": "cross-env NODE_OPTIONS=\"--experimental-vm-modules\" jest",
+    "test:watch": "cross-env NODE_OPTIONS=\"--experimental-vm-modules\" jest --watch",
+    "test:coverage": "cross-env NODE_OPTIONS=\"--experimental-vm-modules\" jest --coverage",
+    "test:dist": "cross-env NODE_OPTIONS=\"--experimental-vm-modules\" jest --config jest.config.dist.ts",
+    "test:dist:coverage": "cross-env NODE_OPTIONS=\"--experimental-vm-modules\" jest --config jest.config.dist.ts --coverage",
+    "lint": "eslint \"src/**/*.ts\" \"tests/**/*.ts\"",
+    "lint:fix": "eslint \"src/**/*.ts\" \"tests/**/*.ts\" --fix"
   },
   "keywords": [],
   "author": "",
@@ -45,7 +48,7 @@
     "prettier": "^3.5.3",
     "rimraf": "^6.0.1",
     "sinon": "^19.0.2",
-    "ts-jest": "^29.2.5",
+    "ts-jest": "^29.3.0",
     "typescript": "^5.8.2",
     "typescript-eslint": "^8.28.0"
   }
