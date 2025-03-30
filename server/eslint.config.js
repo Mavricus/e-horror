@@ -228,8 +228,10 @@ export default [
   },
   {
     files: ['**/*.test.ts', '**/*.e2e-test.ts'],
-    'env': {
-      'jest': true
+    languageOptions: {
+      globals: {
+        ...globals.jest,
+      },
     },
     rules: {
       '@import/no-extraneous-dependencies': 'off',
