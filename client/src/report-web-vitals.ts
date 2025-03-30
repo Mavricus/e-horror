@@ -1,5 +1,5 @@
 import { ReportHandler } from 'web-vitals';
-import logger  from './utils/logger.js';
+import logger from './utils/logger';
 
 const reportWebVitals = (onPerfEntry?: ReportHandler): void => {
   if (onPerfEntry && onPerfEntry instanceof Function) {

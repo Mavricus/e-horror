@@ -23,4 +23,4 @@ function App(): JSX.Element {
   );
 }
 
-export { App }; 
+export { App };
