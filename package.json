@@ -1,0 +1,35 @@
+{
+  "name": "e-horror",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=20.11.1",
+    "pnpm": ">=8.0.0"
+  },
+  "scripts": {
+    "dev": "pnpm -r run dev",
+    "build": "pnpm -r run build",
+    "lint": "pnpm -r run lint",
+    "lint:fix": "pnpm -r run lint:fix",
+    "format": "pnpm -r run format",
+    "format:check": "pnpm -r run format:check"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mavricus/e-horror.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mavricus/e-horror/issues"
+  },
+  "homepage": "https://github.com/Mavricus/e-horror#readme",
+  "devDependencies": {
+    "@eslint/js": "^8.56.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0"
+  }
+} 

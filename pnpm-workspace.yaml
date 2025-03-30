@@ -1,0 +1,6 @@
+packages:
+  - client
+  - server
+ignoredBuiltDependencies:
+  - core-js
+  - core-js-pure
